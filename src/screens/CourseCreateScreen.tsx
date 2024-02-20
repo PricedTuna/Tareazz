@@ -19,7 +19,7 @@ import {CoursesContext} from '../contexts/CoursesContext/CoursesContext';
 interface NavigationProps
   extends StackScreenProps<RootStackParams, 'CourseCreate'> {}
 
-const CourseCreateScreen = ({route}: NavigationProps) => {
+const CourseCreateScreen = ({navigation}: NavigationProps) => {
   const {image, name, onChange, teacher_name, teacher_email, form} = useForm({
     ...CourseInitialState,
   });
@@ -75,7 +75,8 @@ const CourseCreateScreen = ({route}: NavigationProps) => {
             <CustomButton
               text="Guardar"
               action={() => {
-                addCourse({...form});
+                addCourse({...form, id_course: Math.random()});
+                navigation.pop();
               }}
               color="green"
             />

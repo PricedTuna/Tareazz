@@ -4,17 +4,18 @@ import {CourseDetailsStyles} from '../../theme/appTheme';
 import {Teacher} from '../../models/TeacherModel';
 
 interface Props {
-  teacher: Teacher;
+  name: string;
+  email: string;
 }
 
-const CourseDetailsProp = ({teacher}: Props) => {
+const CourseDetailsProp = ({name, email}: Props) => {
   return (
     <View style={CourseDetailsStyles.courseDetailsDataContainer}>
       <Text style={CourseDetailsStyles.courseDetailsDataText}>
-        Profesor: {teacher.name}
+        Profesor: {name}
       </Text>
       <Text style={CourseDetailsStyles.courseDetailsDataText}>
-        Correo: {teacher.mail}
+        Correo: {email}
       </Text>
     </View>
   );
