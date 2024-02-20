@@ -1,10 +1,6 @@
 import {View, Text, Touchable} from 'react-native';
 import React from 'react';
-import {
-  CourseDetailsStyles,
-  GlobalStyles,
-  TaskDetailStyle,
-} from '../../theme/appTheme';
+import {CourseDetailsStyles, GlobalStyles} from '../../theme/appTheme';
 import {StackScreenProps} from '@react-navigation/stack';
 import {RootStackParams} from '../navigator/Navigator';
 import TaskDetailProp from '../components/taskDetailsComponents/TaskDetailProp';
@@ -33,7 +29,7 @@ const TaskDetailsScreen = ({route}: NavigationProps) => {
           <View style={CourseDetailsStyles.courseDetailsDataContainer}>
             <TaskDetailProp text={`Descripción: ${description}`} />
             <TaskDetailProp text={`Fecha limite: ${taskDeadline}`} />
-            <TaskDetailProp text={`Curso: ${courseName}`} />
+            {/* <TaskDetailProp text={`Curso: ${courseName}`} /> */}
             <TaskDetailProp text={`Finalizada: ${realized ? 'si' : 'no'}`} />
           </View>
         </View>

@@ -1,5 +1,4 @@
-import {createContext, useReducer, useState} from 'react';
-import {coursesReducer} from './coursesReducer';
+import {createContext, useState} from 'react';
 import {Course} from '../../../models/CourseModel';
 import {coursesList} from '../../../api/coursesList';
 

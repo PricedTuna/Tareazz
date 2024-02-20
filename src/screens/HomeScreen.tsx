@@ -1,5 +1,5 @@
 import {View, Text, FlatList} from 'react-native';
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect} from 'react';
 import CourseCard from '../components/CourseCard';
 import {Course} from '../../models/CourseModel';
 import {HomeScreenStyles} from '../../theme/appTheme';
