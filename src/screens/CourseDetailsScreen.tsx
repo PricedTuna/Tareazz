@@ -10,7 +10,7 @@ interface NavigationProps
 
 const CourseDetailsScreen = ({route}: NavigationProps) => {
   const course = route.params;
-  const {id_course, image, name, teacher, teacher_mail} = course;
+  const {id_course, image, name, teacher} = course;
 
   return (
     <View>
@@ -22,8 +22,9 @@ const CourseDetailsScreen = ({route}: NavigationProps) => {
         {name}
       </Text>
       <View style={GlobalStyles.globalMargin}>
-        <CourseDetailsProp text={teacher} />
-        <CourseDetailsProp text={teacher_mail} />
+        <View>
+          <CourseDetailsProp teacher={teacher} />
+        </View>
       </View>
     </View>
   );

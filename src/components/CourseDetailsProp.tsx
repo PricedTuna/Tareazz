@@ -1,15 +1,21 @@
 import {View, Text} from 'react-native';
 import React from 'react';
-import {GlobalStyles} from '../../theme/appTheme';
+import {CourseDetailsStyles} from '../../theme/appTheme';
+import {Teacher} from '../../models/TeacherModel';
 
 interface Props {
-  text: string;
+  teacher: Teacher;
 }
 
-const CourseDetailsProp = ({text}: Props) => {
+const CourseDetailsProp = ({teacher}: Props) => {
   return (
-    <View>
-      <Text style={GlobalStyles.globalText}>{text}</Text>
+    <View style={CourseDetailsStyles.courseDetailsDataContainer}>
+      <Text style={CourseDetailsStyles.courseDetailsDataText}>
+        Profesor: {teacher.name}
+      </Text>
+      <Text style={CourseDetailsStyles.courseDetailsDataText}>
+        Correo: {teacher.mail}
+      </Text>
     </View>
   );
 };

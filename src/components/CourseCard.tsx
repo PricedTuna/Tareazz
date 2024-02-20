@@ -1,7 +1,7 @@
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {CourseCardStyles, GlobalStyles} from '../../theme/appTheme';
-import {Course} from '../../models/SubjectModel';
+import {Course} from '../../models/CourseModel';
 import {getStyleText} from '../helpers/getStyledText';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
